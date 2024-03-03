@@ -1,0 +1,47 @@
+@import '../../styles/main';
+.features {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .features__single {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 25%;
+        padding: 43px;
+        gap: 8px;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 140%;
+
+
+        @media (max-width: 1000px) {
+            width: calc(50%);
+           
+        }
+        @media (max-width: 425px) {
+            width: 100%;
+           
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-family: $family-lato-bold;
+            color: #000;
+        }
+
+        p {
+            font-size: 18px;
+            color: #000;
+        }
+    }
+}

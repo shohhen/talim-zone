@@ -1,0 +1,72 @@
+@import '../../styles/main';
+
+#faq {
+   background-color: $second-background;
+   margin-top: 0;
+}
+
+.accordion {
+    width: 100%;
+
+    h2 {
+        font-family: $family-lato-bold;
+        font-size: 40px;
+        text-align: center;
+    }
+}
+.title {
+  cursor: pointer;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 0px 0px $main-text;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin: 24px 0;
+  transition: opacity 0.3s ease, height 0.3s ease, .3s;
+
+  h3 {
+    font-size: 24px;
+    font-family: $family-lato-bold;
+  }
+}
+
+.title:hover {
+    box-shadow: none;
+}
+
+/* Active Title */
+.title.active {
+    box-shadow: none;
+
+    .dropdown.icon {
+        rotate: 180deg;
+    }
+}
+
+/* Dropdown Icon */
+.dropdown.icon {
+    transition: .3s;
+}
+
+/* Accordion Content */
+.content {
+background-color: #fff;
+border: 1px solid #000;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* Visible Content */
+.content.active {
+    opacity: 1;
+    height: auto;
+    padding: 20px;
+}

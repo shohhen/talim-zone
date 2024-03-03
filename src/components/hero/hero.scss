@@ -1,0 +1,110 @@
+@import '../../styles/main';
+
+
+.hero {
+    padding-top: 17px;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4.72px solid #000;
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+        /* .hero_bg {
+            background-image: url( /img/logo2.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            filter: blur(20px);
+            width: 100%;
+            height: 40vh;
+            position: absolute;
+            z-index: -1;
+            top: -180px;
+
+        } */
+
+        h2,
+        span {
+            font-size: 50px;
+            font-family: $family-lato-bold;
+            text-transform: uppercase;
+            line-height: 120%;
+        }
+        h2 {
+            color: $second-background;
+            text-shadow: 2px 2px #000;
+        }
+
+        span {
+            display: inline-block;
+            color: $main-text;
+            font-size: 20px;
+
+        @media (max-width: 425px) {
+            margin-top: 25px;
+        }
+        }
+
+        span::after {
+            content: '|'; 
+            animation: blink-caret 0.8s step-end infinite; 
+            font-weight: bold; 
+            height: 1.2em; 
+            font-size: 30px;
+            color: $second-background;
+
+            @media (max-width: 425px) {
+                font-size: 12px;
+                height: 1em;
+            }
+        }
+
+        @keyframes blink-caret {
+            50% {
+              opacity: 0; /* Hide the caret at 50% of the animation */
+            }
+          }
+
+        .hero__text-button {
+            margin: 32px 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            a{
+                margin-right: 16px;
+                padding: 16px 52px;
+                border: 1px solid $main-text;
+                background: #fff;
+                box-shadow: 4px 4px 0px 0px $main-text;
+                transition: .3s;
+                cursor: pointer;
+                font-size: 16px;
+                text-decoration: none;
+                
+          
+            }
+
+            a:hover {
+                box-shadow: none;
+            }
+
+            a:first-child {
+                background-color: $second-background;
+            }
+        }
+    }
+
+    .hero__img {
+        display: flex;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}

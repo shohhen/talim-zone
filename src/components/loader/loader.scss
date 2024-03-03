@@ -1,0 +1,88 @@
+/* components/Loader.css */
+.loader-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: #fff ; /* Add a semi-transparent background */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out !important;
+    z-index: 9999999;
+}
+
+.loader_block {
+    width: 100% !important;
+}
+
+.loader-container.visible {
+  opacity: 1;
+}
+
+.loader-container.hidden {
+  opacity: 0;
+  z-index: -999;
+  overflow: hidden;
+}
+
+  .loader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg:first-child {
+    position: relative;
+    bottom: 50%;
+    right: 50%;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    -webkit-animation: fill 3s linear 4s infinite;
+    animation: fill 3s linear 4s infinite;
+    background-color: none;
+  }
+
+
+  .loader svg:first-child > path {
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    fill: transparent !important;
+    -webkit-animation: dash 3s ease-in-out 1s  forwards;
+      animation: dash 3s ease-in-out 1s forwards;
+  }
+
+  .loader svg {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: transparent !important;
+  }
+  
+  
+  @keyframes fill {
+    to {
+      fill: #A8AE9B !important;
+    }
+  }
+
+
+  @keyframes dash { /* define aniamtion start point and end */
+    0%, 100% {
+      stroke-dashoffset: 3000;
+      
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
